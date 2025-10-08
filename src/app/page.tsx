@@ -152,7 +152,7 @@ const PUBLICATIONS: Publication[] = [
   {
     year: 2025,
     title: "Striatal dopamine transporter uptake predicts neuronal hypometabolism and visuospatial function in Parkinson’s disease",
-    authors: ["Seungbeom Seo", "Yeo Jun Yoon", "Sangwon Lee", "Hyunkeong Lim", "Kyobin Choo", "Daesung Kim", "Hyunkyung Han", "Seongjin Kang", "Jaekyung Park", "Phil Hyu Lee", "Dongwoo Kim", "Mijin Yun*"],
+    authors: ["Seungbeom Seo¹", "Yeo Jun Yoon¹", "Sangwon Lee", "Hyunkeong Lim", "Kyobin Choo", "Daesung Kim", "Hyunkyung Han", "Seongjin Kang", "Jaekyung Park", "Phil Hyu Lee", "Dongwoo Kim*", "Mijin Yun*"],
     venue: "European Journal of Nuclear Medicine and Molecular Imaging",
     tags: ["Parkinson's disease", "DAT"],
     links: [
@@ -161,7 +161,7 @@ const PUBLICATIONS: Publication[] = [
       // { label: "BibTeX", kind: "bibtex", bibtex: "@article{...}" },
     ],
     // highlight: true,
-    // thumbnail: None,   // public/public/pubs/… 에 이미지 두기
+    thumbnail: "/pubs/Parkinson_thumbnail.jpg",   // public/public/pubs/… 에 이미지 두기
     // thumbnailAlt: "M2M-Reg paper thumbnail",
   },
 ];
@@ -372,7 +372,7 @@ export default function AcademicSite() {
               whileInView="show"
               viewport={{ once: true }}
             >
-              <p className="text-sm leading-relaxed">
+              <p className="text-base leading-relaxed">
                 <span className="font-mono text-neutral-500 dark:text-neutral-400">
                   [{n.date}]
                 </span>{" "}
