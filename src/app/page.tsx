@@ -21,8 +21,8 @@ import Image from "next/image";
  */
 
 // ---------------------- CONFIGURABLE DATA ----------------------
-const micv_link = <a href="https://micv.yonsei.ac.kr/home" className="text-blue-600 font-semibold hover:underline">MICV Lab</a>
-const prof_link = <a href="https://micv.yonsei.ac.kr/seongjae" className="text-blue-600 font-semibold hover:underline">Seong Jae Hwang</a>
+const micv_link = <Link href="https://micv.yonsei.ac.kr/home" className="text-blue-600 font-semibold hover:underline">MICV Lab</Link>
+const prof_link = <Link href="https://micv.yonsei.ac.kr/seongjae" className="text-blue-600 font-semibold hover:underline">Seong Jae Hwang</Link>
 const hhk_bold = <strong>Hyunkyung Han</strong>
 const PROFILE = {
   name: "Hyunkyung Han",
@@ -116,7 +116,7 @@ const PUBLICATIONS: Publication[] = [
       // { label: "BibTeX", kind: "bibtex", bibtex: "@article{...}" },
     ],
     // highlight: true,
-    thumbnail: "/public/pubs/alz_thumbnail.jpg",   // public/public/pubs/… 에 이미지 두기
+    thumbnail: "/pubs/alz_thumbnail.jpg",   ///pubs/… 에 이미지 두기
     thumbnailAlt: "CT parcellation paper thumbnail",
   },
   {
@@ -131,7 +131,7 @@ const PUBLICATIONS: Publication[] = [
       // { label: "BibTeX", kind: "bibtex", bibtex: "@article{...}" },
     ],
     // highlight: true,
-    thumbnail: "/public/pubs/CNM_thumbnail.jpg",   // public/public/pubs/… 에 이미지 두기
+    thumbnail: "/pubs/CNM_thumbnail.jpg",   ///pubs/… 에 이미지 두기
     thumbnailAlt: "Denoising paper thumbnail",
   },
   {
@@ -141,12 +141,12 @@ const PUBLICATIONS: Publication[] = [
     venue: "Medical Image Computing and Computer Assisted Intervention (MICCAI) 2025",
     tags: ["Multi-modal", "Registration", "M2M-Reg"],
     links: [
-      { label: "Paper", href: "https://journals.lww.com/nuclearmed/abstract/2025/10000/gan_based_denoising_for_scan_time_reduction_and.7.aspx" },
-      // { label: "Code", href: "#" },
+      { label: "Paper", href: "https://arxiv.org/abs/2506.15596" },
+      { label: "Code", href: "https://github.com/MICV-yonsei/M2M-Reg" },
       // { label: "BibTeX", kind: "bibtex", bibtex: "@article{...}" },
     ],
     // highlight: true,
-    thumbnail: "/public/pubs/M2M_thumbnail.jpg",   // public/public/pubs/… 에 이미지 두기
+    thumbnail: "/pubs/M2M_thumbnail.jpg",   ///public/pubs/… 에 이미지 두기
     thumbnailAlt: "M2M-Reg paper thumbnail",
   },
   {
@@ -393,14 +393,15 @@ export default function AcademicSite() {
 
       {/* Publications */}
       <section id="publications" className="mx-auto max-w-5xl px-4 py-4 md:py-6">
-        <div className="flex items-center justify-between gap-4 mb-4">
+        {/* 헤더: 모바일에서 줄바꿈 */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 mb-4">
           <h2 className="text-xl md:text-2xl font-semibold tracking-tight flex items-center gap-2">
             <Award className="size-5" /> Papers
           </h2>
           <div className="flex items-center gap-2">
             <Input
               placeholder="Search title, author, venue, tag…"
-              className="w-64"
+              className="w-full sm:w-64"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             />
@@ -420,16 +421,16 @@ export default function AcademicSite() {
                 : "border-neutral-200 dark:border-neutral-800"
                 }`}
             >
-              {/* Row layout: thumbnail (left) + content (right) */}
-              <div className="p-4 md:p-5 flex flex-row items-start gap-5">
-                {/* Thumbnail (optional) */}
+              {/* ✅ 모바일: 세로 / 데스크탑: 가로 */}
+              <div className="p-4 md:p-5 flex flex-col md:flex-row items-start gap-4 md:gap-5">
+                {/* Thumbnail */}
                 {p.thumbnail ? (
-                  <div className="flex-shrink-0">
+                  <div className="relative w-full md:w-60 aspect-[4/3] overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
                     <img
                       src={p.thumbnail}
                       alt={p.thumbnailAlt ?? p.title}
                       loading="lazy"
-                      className="w-60 h-45 object-cover border border-neutral-200 dark:border-neutral-800 transition-transform duration-200 group-hover:scale-[1.02]"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.02]"
                     />
                   </div>
                 ) : null}
@@ -452,17 +453,14 @@ export default function AcademicSite() {
                   {/* 저자 */}
                   <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-1">
                     {p.authors.map((a, i) => (
-                      <span
-                        key={i}
-                        className={a.includes("Hyunkyung Han") ? "font-semibold" : undefined}
-                      >
+                      <span key={i} className={a.includes("Hyunkyung Han") ? "font-semibold" : undefined}>
                         {a}
                         {i < p.authors.length - 1 && ", "}
                       </span>
                     ))}
                   </p>
 
-                  {/* 학회/저널 (venue) */}
+                  {/* 학회/저널 */}
                   <p className="text-sm text-neutral-500 dark:text-neutral-400 italic mt-0.5">
                     {p.venue}
                   </p>
@@ -484,7 +482,11 @@ export default function AcademicSite() {
                         );
                       }
                       if (isExternalLink(l)) {
-                        return <Anchor key={i} href={l.href}>{l.label}</Anchor>;
+                        return (
+                          <Anchor key={i} href={l.href}>
+                            {l.label}
+                          </Anchor>
+                        );
                       }
                       return null;
                     })}
@@ -536,7 +538,7 @@ export default function AcademicSite() {
           <Card className="rounded-2xl">
             <CardContent className="p-5 space-y-2">
               <p>
-                For collaboration, reviewing, or talks, please reach out via <a className="underline decoration-dotted underline-offset-4" href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>.
+                For collaboration, reviewing, or talks, please reach out via <a className="underline decoration-dotted underline-offset-4" href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>
               </p>
               {/* <p className="text-sm text-neutral-600 dark:text-neutral-300">I’m especially interested in PET harmonization, multi-modal registration, and diffusion-based generation.</p> */}
             </CardContent>
