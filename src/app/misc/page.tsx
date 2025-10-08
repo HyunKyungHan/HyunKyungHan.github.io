@@ -105,7 +105,7 @@ export default function MiscPage() {
                     ))}
                 </ul> */}
                 <p className="mx-auto w-fit mb-4">
-                    I spend most of my free time listening to rock music 🎸—I love the energy and emotion it brings.
+                    I spend most of my free time listening to rock music 🎸—I love its energy and spirit.
                     I&apos;m also a huge fan of <a href="https://youtu.be/1rv_UzdOhac?si=VFP_CSK01ZAI8Pui" target="_blank" rel="noreferrer" className="font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
                     >NELL</a>.
                     Recently, I got the chance to join the MICCAI band and perform live!
