@@ -161,7 +161,7 @@ const PUBLICATIONS: Publication[] = [
       // { label: "BibTeX", kind: "bibtex", bibtex: "@article{...}" },
     ],
     // highlight: true,
-    thumbnail: "/pubs/Parkinson_thumbnail.jpg",   // public/public/pubs/… 에 이미지 두기
+    thumbnail: "/pubs/Parkinson_thumbnail.png",   // public/public/pubs/… 에 이미지 두기
     // thumbnailAlt: "M2M-Reg paper thumbnail",
   },
 ];
