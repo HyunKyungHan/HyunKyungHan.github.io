@@ -560,6 +560,7 @@ export default function AcademicSite() {
         </div>
       </section>
 
+
       {/* Footer */}
       <footer className="border-t border-neutral-200 dark:border-neutral-800 py-10 mt-8">
         <div className="mx-auto max-w-5xl px-4 flex flex-col items-center justify-between gap-3 text-sm text-neutral-600 dark:text-neutral-400">
