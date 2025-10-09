@@ -425,7 +425,7 @@ export default function AcademicSite() {
               <div className="p-4 md:p-5 flex flex-col md:flex-row items-start gap-4 md:gap-5">
                 {/* Thumbnail */}
                 {p.thumbnail ? (
-                  <div className="relative w-full md:w-60 aspect-[4/3] overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
+                  <div className="relative w-full md:w-60 aspect-[4/3] overflow-hidden border border-neutral-200 dark:border-neutral-800">
                     <img
                       src={p.thumbnail}
                       alt={p.thumbnailAlt ?? p.title}
