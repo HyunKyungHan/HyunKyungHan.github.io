@@ -30,7 +30,7 @@ const photos = [
     { src: "/misc/price_tag.png", alt: "MICCAI 2025 band performance", caption: "Performing @MICCAI2025 Gala Dinner, 2025" },
     { src: "/misc/apt.png", alt: "MICCAI 2025 band performance", caption: "Performing @MICCAI2025 Gala Dinner, 2025" },
     { src: "/misc/newcurem.jpg", alt: "at Korean Dementia Conference", caption: "Promoting NewCureM's software at  Korean Dementia Conference, 2025" },
-    { src: "/misc/pentaport.jpg", alt: "at PENTAPORT rock festival", caption: "PENAPORT, 2025" },
+    { src: "/misc/pentaport.jpg", alt: "at PENTAPORT rock festival", caption: "Pentaport, 2025" },
     { src: "/misc/nell.jpg", alt: "Me at a NELL concert", caption: "NELL concert, 2024" },
 ];
 
