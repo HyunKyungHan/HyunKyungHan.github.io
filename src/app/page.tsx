@@ -71,8 +71,10 @@ const bold_GAN = <b>&quot;GAN-based Denoising for Scan Time Reduction and Motion
 const bold_M2M = <b>&quot;Mono-Modalizing Extremely Heterogeneous Multi-Modal Medical Image Registration&quot;</b>
 const italic_CNM = <i>Clinical Nuclear Medicine (Impact Factor=10.0)</i>
 const italic_MICCAI = <i>MICCAI 2025</i>
+const italic_ADT = <i>Alzheimer's Research & Therapy</i>
 const NEWS = [
   { date: "2025.09", text: "MICCAI band debuted at the MICCAI 2025 Gala dinner! I performed as the singer😎.", link: "https://www.atnnews.co.kr/news/articleView.html?idxno=106188" },
+  { date: "2025.09", text: <>One paper accepted to {italic_ADT}!🎉</> },
   // {
   //   date: "2025.09",
   //   text: "Our paper on Mono-Modalizing Heterogeneous Multi-Modal Registration was presented as poster at MICCAI 2025.",
