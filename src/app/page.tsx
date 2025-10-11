@@ -32,7 +32,7 @@ const PROFILE = {
   avatar: "/pubs/profile2.jpg",
   about:
     <>
-      I am currently pursuing my M.S.at the {micv_link} advised by professor {prof_link}. I&apos; m interested in addressing fundamental challenges in medical imaging through deep learning, with the goal of enhancing the efficiency and accuracy of clinical workflows. My research interests include image registration, domain generalization, and weakly supervised segmentation.
+      I am currently pursuing my M.S.at the {micv_link} advised by professor {prof_link}. I&apos;m interested in addressing fundamental challenges in medical imaging through deep learning, with the goal of enhancing the efficiency and accuracy of clinical workflows. My research interests include image registration, domain generalization, and weakly supervised segmentation.
     </>
 };
 
@@ -71,7 +71,7 @@ const bold_GAN = <b>&quot;GAN-based Denoising for Scan Time Reduction and Motion
 const bold_M2M = <b>&quot;Mono-Modalizing Extremely Heterogeneous Multi-Modal Medical Image Registration&quot;</b>
 const italic_CNM = <i>Clinical Nuclear Medicine (Impact Factor=10.0)</i>
 const italic_MICCAI = <i>MICCAI 2025</i>
-const italic_ADT = <i>Alzheimer's Research & Therapy</i>
+const italic_ADT = <i>Alzheimer&apos;s Research & Therapy</i>
 const NEWS = [
   { date: "2025.09", text: "MICCAI band debuted at the MICCAI 2025 Gala dinner! I performed as the singer😎.", link: "https://www.atnnews.co.kr/news/articleView.html?idxno=106188" },
   { date: "2025.09", text: <>One paper accepted to {italic_ADT}!🎉</> },
