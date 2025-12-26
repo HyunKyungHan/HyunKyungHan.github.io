@@ -279,7 +279,7 @@ export default function AcademicSite() {
               {dark ? <Sun className="size-5" /> : <Moon className="size-5" />}
             </Button> */}
             <Button size="sm" className="rounded-xl">
-              <Link href="/pubs/hhk_cv.pdf" target="_blank" rel="noreferrer">
+              <Link href="/pubs/CV_HyunKyungHan.pdf" target="_blank" rel="noreferrer">
                 <FileDown className="size-4 mr-1" /> CV
               </Link>
             </Button>

@@ -26,20 +26,19 @@ const PROFILE = {
 
 const photos = [
     // public/misc/ 폴더에 이미지 넣고 아래 경로만 바꿔줘
+    { src: "/misc/poster.jpg", alt: "at poster session", caption: "Presenting Poster at MICCAI, 2025" },
     { src: "/misc/micv_band_practice.jpg", alt: "band practice", caption: "During MICCAI band practice, 2025" },
     { src: "/misc/price_tag.png", alt: "MICCAI 2025 band performance", caption: "Performing @MICCAI2025 Gala Dinner, 2025" },
     { src: "/misc/apt.png", alt: "MICCAI 2025 band performance", caption: "Performing @MICCAI2025 Gala Dinner, 2025" },
     { src: "/misc/newcurem.jpg", alt: "at Korean Dementia Conference", caption: "Promoting NewCureM's software at  Korean Dementia Conference, 2025" },
     { src: "/misc/pentaport.jpg", alt: "at PENTAPORT rock festival", caption: "Pentaport, 2025" },
-    { src: "/misc/nell.jpg", alt: "Me at a NELL concert", caption: "NELL concert, 2024" },
 ];
 
-const funFacts = [
-    "I take photos on film once a month.",
-    "I keep a log of the coffee beans I try.",
-    "I can read papers faster with instrumental music on loop.",
-    // 원하는 만큼 추가!
-];
+// const funFacts = [
+//     "I take photos on film once a month.",
+//     "I keep a log of the coffee beans I try.",
+//     "I can read papers faster with instrumental music on loop.",
+// ];
 
 export default function MiscPage() {
     return (
@@ -62,7 +61,7 @@ export default function MiscPage() {
               {dark ? <Sun className="size-5" /> : <Moon className="size-5" />}
             </Button> */}
                         <Button size="sm" className="rounded-xl">
-                            <a href="/pubs/hhk_cv.pdf" target="_blank" rel="noreferrer">
+                            <a href="/pubs/CV_HyunKyungHan.pdf" target="_blank" rel="noreferrer">
                                 <FileDown className="size-4 mr-1" /> CV
                             </a>
                         </Button>
