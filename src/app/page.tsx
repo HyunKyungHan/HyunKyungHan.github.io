@@ -107,6 +107,21 @@ type Publication = {
 // PUBLICATIONS를 Publication[]로 선언
 const PUBLICATIONS: Publication[] = [
   {
+    year: 2026,
+    title: "Association of White Matter Hyperintensities, Regional Brain Glucose Metabolism, and Cognitive Impairment in Aβ-Negative Patients.",
+    authors: ["Minjae So", "Seungbeom Seo", "Dongwoo Kim", "Sangwon Lee", "Hyunkeong Lim", "Yeo Jun Yoon", "Daesung Kim", "Hyunkyung Han", "Youngjun Jun", "Seongjin Kang", "Hyo Jung Seo", "Tae Joo Jeon", "Sangwoo Cho", "Hee Joo Yoon", "Young-gun Lee", "Mijin Yun*"],
+    venue: "Neurology",
+    tags: ["White Matter Hyperintensities", "Brain", "PET", "MRI"],
+    links: [
+      { label: "Paper", href: "https://www.neurology.org/doi/10.1212/WNL.0000000000214772" },
+      // { label: "Code", href: "#" },
+      // { label: "BibTeX", kind: "bibtex", bibtex: "@article{...}" },
+    ],
+    // highlight: true,
+    thumbnail: "/pubs/neurology_thumbnail.jpg",   ///pubs/… 에 이미지 두기
+    thumbnailAlt: "PWMH paper thumbnail",
+  },
+  {
     year: 2025,
     title: "Centiloid values from deep learning-based CT parcellation: a valid alternative to freesurfer",
     authors: ["Yeo Jun Yoon", "Seungbeom Seo", "Sangwon Lee", "Hyunkeong Lim", "Kyobin Choo", "Daesung Kim", "Hyunkyung Han", "Minjae So", "Hosung Kang", "Seongjin Kang", "Dongwoo Kim", "Young-gun Lee", "Dongho Shin", "Tae Joo Jeon", "Mijin Yun*"],
@@ -119,7 +134,7 @@ const PUBLICATIONS: Publication[] = [
     ],
     // highlight: true,
     thumbnail: "/pubs/alz_thumbnail.jpg",   ///pubs/… 에 이미지 두기
-    thumbnailAlt: "CT parcellation paper thumbnail",
+    thumbnailAlt: "Centiloid paper thumbnail",
   },
   {
     year: 2025,
@@ -398,7 +413,7 @@ export default function AcademicSite() {
         {/* 헤더: 모바일에서 줄바꿈 */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 mb-4">
           <h2 className="text-xl md:text-2xl font-semibold tracking-tight flex items-center gap-2">
-            <Award className="size-5" /> Papers
+            <Award className="size-5" /> Selected Papers
           </h2>
           <div className="flex items-center gap-2">
             <Input
