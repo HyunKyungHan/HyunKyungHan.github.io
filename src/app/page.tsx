@@ -32,7 +32,7 @@ const PROFILE = {
   avatar: "/pubs/profile2.jpg",
   about:
     <>
-      I am currently pursuing my M.S.at the {micv_link} advised by professor {prof_link}. I&apos;m interested in addressing fundamental challenges in medical imaging through deep learning, with the goal of enhancing the efficiency and accuracy of clinical workflows. My research interests include image registration, domain generalization, and weakly supervised segmentation.
+      I am currently pursuing my M.S.at the {micv_link} advised by professor {prof_link}. My primary research focuses on addressing fundamental challenges in medical imaging through deep learning, with the goal of improving the efficiency and accuracy of clinical workflows. More recently, I have expanded my interests to efficient AI, particularly hardware-aware model compression and acceleration for deploying deep learning models on mobile devices.
     </>
 };
 
@@ -72,7 +72,15 @@ const bold_M2M = <b>&quot;Mono-Modalizing Extremely Heterogeneous Multi-Modal Me
 const italic_CNM = <i>Clinical Nuclear Medicine (Impact Factor=10.0)</i>
 const italic_MICCAI = <i>MICCAI 2025</i>
 const italic_ADT = <i>Alzheimer&apos;s Research & Therapy</i>
+const italic_AJNR = <i>American Journal of Neuroradiology</i>
+const italic_CImaging = <i>Cancer Imaging</i>
+const italic_ECCV = <i>ECCV 2026</i>
+const AI_seoultech = <b>AI Seoul Tech Research Program</b>
 const NEWS = [
+  { date: "2026.06", text: <>Received Scholarship from the {AI_seoultech}!🎉</> },
+  { date: "2026.06", text: <>One paper accepted to {italic_ECCV}!🎉</> },
+  { date: "2026.06", text: <>One paper accepted to {italic_CImaging}!🎉</> },
+  { date: "2026.04", text: <>One paper accepted to {italic_AJNR}!🎉</> },
   { date: "2025.09", text: "MICCAI band debuted at the MICCAI 2025 Gala dinner! I performed as the singer😎.", link: "https://www.atnnews.co.kr/news/articleView.html?idxno=106188" },
   { date: "2025.09", text: <>One paper accepted to {italic_ADT}!🎉</> },
   // {
@@ -106,6 +114,21 @@ type Publication = {
 
 // PUBLICATIONS를 Publication[]로 선언
 const PUBLICATIONS: Publication[] = [
+  {
+    year: 2026,
+    title: "QWERTY: Training-Free Motion Control via Query-Warped Video Diffusion Transformers.",
+    authors: ["Kyobin Choo", "Youngmin Kim", "Hyunkyung Han", "Geunrip Park", "Chanyoung Kim", "Sunyoung Jung", "Seong Jae Hwang"],
+    venue: "European Conference on Computer Vision (ECCV) 2026",
+    tags: ["Video Generation", "Diffusion Transformers", "Motion Control", "Training-Free"],
+    links: [
+      { label: "Paper", href: "https://arxiv.org/abs/2607.01869" },
+      // { label: "Code", href: "#" },
+      // { label: "BibTeX", kind: "bibtex", bibtex: "@article{...}" },
+    ],
+    // highlight: true,
+    thumbnail: "/pubs/qwerty_thumbnail.png",   ///pubs/… 에 이미지 두기
+    thumbnailAlt: "ECCV 2026 paper thumbnail",
+  },
   {
     year: 2026,
     title: "Association of White Matter Hyperintensities, Regional Brain Glucose Metabolism, and Cognitive Impairment in Aβ-Negative Patients.",
